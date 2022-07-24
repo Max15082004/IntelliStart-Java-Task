@@ -1,0 +1,125 @@
+import java.util.*;
+public class Test {
+    public void DisplayListProducts(int ID1, String Name1, double Price1, int ID2, String Name2,
+                                    double Price2, int ID3, String Name3, double Price3){
+
+        System.out.println("Information about product number 1:\n")
+        String.out.println("Id: "+ID1+"\nName: "+Name1+"\nPrice: "+Price1+"\n");
+        System.out.println("Information about product number 2:\n")
+        String.out.println("Id: "+ID2+"\nName: "+Name2+"\nPrice: "+Price2+"\n");
+        System.out.println("Information about product number 3:\n")
+        String.out.println("Id: "+ID3+"\nName: "+Name3+"\nPrice: "+Price3+"\n");
+    }
+
+    public void DisplayListUsers(int ID1, String FirstName1, String LastName1, double AmountOfMoney1, int ID2,
+                                 String FirstName2, String LastName2, double AmountOfMoney2, int ID3, String FirstName3,
+                                 String LastName3, double AmountOfMoney3){
+        System.out.println("Information about user number 1:\n")
+        String.out.println("Id: "+ID1+"\nFirst Name: "+FirstName1+"\nLast Name: "+LastName1+"\nPrice: "+Price1+"\n");
+        System.out.println("Information about user number 2:\n")
+        String.out.println("Id: "+ID2+"\nFirst Name: "+FirstName2+"\nLast Name: "+LastName2+"\nPrice: "+Price2+"\n");
+        System.out.println("Information about user number 3:\n")
+        String.out.println("Id: "+ID3+"\nFirst Name: "+FirstName3+"\nLast Name: "+LastName3+"\nPrice: "+Price3+"\n");
+    }
+
+    public double ifUserBuyProduct(int ID1, int ID2, int ID3, int id1, int id2, int id3, int price1, int price2,
+                                 int price3, int amount1, int amount2, int amount3) {
+        int price, amount;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input an ID of product you want to buy: ");
+        int IDofProd = in.nextInt();
+        System.out.println("Input an ID of user: ");
+        int IDofUser = in.nextInt();
+        if (IDofProd == ID1 && IDofUser = id1) {
+            price = price1;
+            amount = amount1;
+        } else if (IDofProd == ID1 && IDofUser = id2) {
+            price = price1;
+            amount = amount2;
+        } else if (IDofProd == ID1 && IDofUser = id3) {
+            price = price1;
+            amount = amount3;
+        } else if (IDofProd == ID2 && IDofUser = id1) {
+            price = price2;
+            amount = amount1;
+        } else if (IDofProd == ID2 && IDofUser = id2) {
+            price = price2;
+            amount = amount2;
+        } else if (IDofProd == ID2 && IDofUser = id3) {
+            price = price2;
+            amount = amount3;
+        } else if (IDofProd == ID3 && IDofUser = id1) {
+            price = price3;
+            amount = amount1;
+        } else if (IDofProd == ID3 && IDofUser = id2) {
+            price = price3;
+            amount = amount2;
+        } else if (IDofProd == ID3 && IDofUser = id3) {
+            price = price3;
+            amount = amount3;
+        } else {
+            System.out.println("Sorry, you entered a wrong ID of user! Please, try again :)");
+            System.out.println("Sorry, you entered a wrong ID of product! Please, try again :)");
+        }
+        if(price <= amount){
+        System.out.println("Congradulations! The product has been purchased :)");
+        amount -= price;
+        System.out.println("User have been bought a product.")
+        }
+        else
+            System.out.println("Sorry, you don't have enough money to buy this product :(");
+        return amount;
+    }
+
+    public static void main(String[] args) {
+        Test list = new Test();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input an ID of product number 1: ");
+        int ID1 = in.nextInt();
+        System.out.println("Input a name of product number 1: ");
+        String Name1 = in.nextLine();
+        System.out.println("Input a price of product number 1: ");
+        double Price1 = in.nextDouble();
+        System.out.println("Input an ID of product number 2: ");
+        int ID2 = in.nextInt();
+        System.out.println("Input a name of product number 2: ");
+        String Name2 = in.nextLine();
+        System.out.println("Input a price of product number 2: ");
+        double Price2 = in.nextDouble();
+        System.out.println("Input an ID of product number 3: ");
+        int ID3 = in.nextInt();
+        System.out.println("Input a name of product number 3: ");
+        String Name3 = in.nextLine();
+        System.out.println("Input a price of product number 3: ");
+        double Price3 = in.nextDouble();
+        System.out.println("Input an ID of user number 1: ");
+        int Id1 = in.nextInt();
+        System.out.println("Input a first name of user number 1: ");
+        String FirstName1 = in.nextLine();
+        System.out.println("Input a last name of user number 1: ");
+        String LastName1 = in.nextLine();
+        System.out.println("Input an amount of money of user number 1: ");
+        double AmountOfMoney1 = in.nextDouble();
+        System.out.println("Input an ID of user number 2: ");
+        int Id2 = in.nextInt();
+        System.out.println("Input a first name of user number 2: ");
+        String FirstName2 = in.nextLine();
+        System.out.println("Input a last name of user number 2: ");
+        String LastName2 = in.nextLine();
+        System.out.println("Input an amount of money of user number 2: ");
+        double AmountOfMoney2 = in.nextDouble();
+        System.out.println("Input an ID of user number 3: ");
+        int Id3 = in.nextInt();
+        System.out.println("Input a first name of user number 3: ");
+        String FirstName3 = in.nextLine();
+        System.out.println("Input a last name of user number 3: ");
+        String LastName3 = in.nextLine();
+        System.out.println("Input an amount of money of user number 3: ");
+        double AmountOfMoney3 = in.nextDouble();
+        list.DisplayListProducts(ID1, Name1, Price1, ID2, Name2, Price2, ID3, Name3, Price3);
+        list.DisplayListUsers(Id1, FirstName1, LastName1, AmountOfMoney1, Id2, FirstName2,
+                LastName2, AmountOfMoney2, Id3, FirstName3, LastName3, AmountOfMoney3);
+        list.ifUserBuyProduct(ID1, ID2, ID3, Id1, Id2, Id3, Price1, Price2,
+        Price3, AmountOfMoney1, AmountOfMoney2, AmountOfMoney3);
+    }
+}
